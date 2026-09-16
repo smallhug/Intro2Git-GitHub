@@ -4,7 +4,7 @@ class: flex flex-col h-full
 ---
 
 <div class="pt-2 mb-2">
-  <h1 class="!border-none !mb-0 text-3xl font-bold">25｜`git push`：将本地成果同步到云端</h1>
+  <h1 class="!border-none !mb-0 text-3xl font-bold">25｜'git push'：将本地成果同步到云端</h1>
 </div>
 
 <div class="grid grid-cols-2 gap-8 my-auto">
@@ -38,15 +38,15 @@ git remote -v
 </h3>
 
 <div class="p-3.5 bg-red-500/10 border border-red-500/25 text-xs rounded-xl space-y-1.5">
-  <div class="text-red-400 font-bold">❌ [rejected - non-fast-forward]</div>
+  <div class="text-red-400 font-bold">[rejected - non-fast-forward]</div>
   <div class="text-gray-300 leading-relaxed">
     <strong>根本原因</strong>：团队其他成员先于你提交了新代码，你的本地历史已经落后！<br/>
     <strong>正确解法</strong>：先 <code>git pull</code> 拉取云端变动并在本地测试验证后，再执行推送。
   </div>
 </div>
 
-<div class="p-3.5 bg-yellow-500/10 border border-yellow-500/30 text-xs rounded-xl text-yellow-200">
-  ⚠️ <strong>绝对禁区</strong>：切勿在公共团队分支上滥用 <code>git push --force</code>，这会强行抹去同事已提交的历史！
+<div class="p-3.5 bg-yellow-500/10 border border-yellow-500/30 text-xs rounded-xl text-yellow-700">
+<strong>绝对禁区</strong>：切勿在公共团队分支上滥用 <code>git push --force</code>，这会强行抹去同事已提交的历史！
 </div>
 
 </div>
@@ -70,9 +70,9 @@ class: flex flex-col h-full
 <div class="p-5 bg-white/5 border border-white/10 rounded-2xl space-y-3">
   <h3 class="text-base font-bold text-emerald-400">PR 的本质与工程价值</h3>
   <ul class="space-y-2 text-xs text-gray-300 leading-relaxed">
-    <li>• <strong>字面含义</strong>：“我写好了一段代码，请（Pull）拉取并合入你的主干吧！”</li>
-    <li>• <strong>缓冲审查空间</strong>：避免任何人随心所欲直接向主分支注水，提供了一个集中展示代码 Diff 与讨论的控制台。</li>
-    <li>• <strong>自动化流水线门禁</strong>：只有自动化测试全绿、Lint 检查合规，才允许进入人工审查环节。</li>
+    <li><strong>字面含义</strong>：“我写好了一段代码，请（Pull）拉取并合入你的主干吧！”</li>
+    <li><strong>缓冲审查空间</strong>：避免任何人随心所欲直接向主分支注水，提供了一个集中展示代码 Diff 与讨论的控制台。</li>
+    <li><strong>自动化流水线门禁</strong>：只有自动化测试全绿、Lint 检查合规，才允许进入人工审查环节。</li>
   </ul>
 </div>
 
@@ -191,14 +191,14 @@ git merge upstream/main
 ```
 
 <div class="p-3 bg-white/5 border border-white/10 rounded-xl text-xs text-gray-300">
-  💡 <strong>最佳实践</strong>：保持个人本地的 <code>main</code> 分支干净，仅用于与 upstream 对齐，一切功能改动在独立分支进行。
+<strong>最佳实践</strong>：保持个人本地的 <code>main</code> 分支干净，仅用于与 upstream 对齐，一切功能改动在独立分支进行。
 </div>
 
 </div>
 
 <div class="p-6 bg-gray-500/10 border border-gray-500/20 rounded-2xl flex flex-col justify-between space-y-3">
 
-<h3 class="text-base font-bold text-emerald-400">双远程模型（Origin vs Upstream）</h3>
+<h3 class="text-base font-bold text-emerald-400">双远程模型（Origin、Upstream）</h3>
 
 <div class="space-y-2.5 text-xs">
   <div class="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-start gap-2.5">
@@ -212,7 +212,7 @@ git merge upstream/main
   <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-start gap-2.5">
     <svg class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
     <div>
-      <div class="font-bold text-emerald-300">2. 本地开发与推送（Push to Origin）</div>
+      <div class="font-bold text-emerald-600">2. 本地开发与推送（Push to Origin）</div>
       <div class="text-gray-300 mt-0.5">基于最新 upstream 创建 feature 分支，改动提交后推送到自己的 origin 仓库。</div>
     </div>
   </div>
@@ -249,13 +249,13 @@ class: flex flex-col h-full
       <span>Issue (缺陷与工单)</span>
     </div>
     <ul class="text-xs text-gray-300 space-y-2 leading-relaxed">
-      <li>• <strong>定位</strong>：明确的 Bug 故障、可落地的功能特性提案。</li>
-      <li>• <strong>原则</strong>：遵循仓库模板，提供<strong>最小复现环境 (Repro)</strong> 与完整报错堆栈。</li>
-      <li>• <strong>闭环</strong>：与 PR 联动，在提交信息中写入 <code>Closes #123</code> 自动关闭。</li>
+      <li><strong>定位</strong>：明确的 Bug 故障、可落地的功能特性提案。</li>
+      <li><strong>原则</strong>：遵循仓库模板，提供<strong>最小复现环境 (Repro)</strong> 与完整报错堆栈。</li>
+      <li><strong>闭环</strong>：与 PR 联动，在提交信息中写入 <code>Closes #123</code> 自动关闭。</li>
     </ul>
   </div>
-  <div class="text-[11px] text-red-300/80 bg-red-500/10 p-2 rounded-lg">
-    ❌ 勿将用法答疑、泛泛的咨询发在 Issue。
+  <div class="text-[11px] text-red-300 bg-red-500/10 p-2 rounded-lg">
+勿将用法答疑、泛泛的咨询发在 Issue。
   </div>
 </div>
 
@@ -266,13 +266,13 @@ class: flex flex-col h-full
       <span>Discussion (讨论区)</span>
     </div>
     <ul class="text-xs text-gray-300 space-y-2 leading-relaxed">
-      <li>• <strong>定位</strong>：架构 RFC 征集、日常答疑 (Q&A)、设计想法探讨。</li>
-      <li>• <strong>优势</strong>：支持标记“最佳解答 (Accepted Answer)”，形成社区沉淀。</li>
-      <li>• <strong>流转</strong>：在讨论形成明确实施共识后，再转为正式 Issue。</li>
+      <li><strong>定位</strong>：架构 RFC 征集、日常答疑 (Q&A)、设计想法探讨。</li>
+      <li><strong>优势</strong>：支持标记“最佳解答 (Accepted Answer)”，形成社区沉淀。</li>
+      <li><strong>流转</strong>：在讨论形成明确实施共识后，再转为正式 Issue。</li>
     </ul>
   </div>
-  <div class="text-[11px] text-purple-300/80 bg-purple-500/10 p-2 rounded-lg">
-    💡 提问前善用搜索，通常你的困惑已被解答。
+  <div class="text-[11px] text-purple-300 bg-purple-500/10 p-2 rounded-lg">
+提问前善用搜索，通常你的困惑已被解答。
   </div>
 </div>
 
@@ -283,20 +283,20 @@ class: flex flex-col h-full
       <span>Pull Request (PR)</span>
     </div>
     <ul class="text-xs text-gray-300 space-y-2 leading-relaxed">
-      <li>• <strong>定位</strong>：已经完成且经过验证的具象化代码或文档补丁。</li>
-      <li>• <strong>原则</strong>：一个 PR 专注一件具体的事（避免上千行大杂烩）。</li>
-      <li>• <strong>门禁</strong>：跑通所有 CI 单测，等待 Maintainer 评审合入。</li>
+      <li><strong>定位</strong>：已经完成且经过验证的具象化代码或文档补丁。</li>
+      <li><strong>原则</strong>：一个 PR 专注一件具体的事（避免上千行大杂烩）。</li>
+      <li><strong>门禁</strong>：跑通所有 CI 单测，等待 Maintainer 评审合入。</li>
     </ul>
   </div>
-  <div class="text-[11px] text-emerald-300/80 bg-emerald-500/10 p-2 rounded-lg">
-    ✨ 开源协同的最终落脚点与价值兑现。
+  <div class="text-[11px] text-emerald-600 bg-emerald-500/10 p-2 rounded-lg">
+开源协同的最终落脚点与价值兑现。
   </div>
 </div>
 
 </div>
 
 <div class="p-2.5 bg-white/5 border border-white/10 rounded-xl text-xs text-gray-400 text-center">
-  💡 协作黄金三部曲：<strong>在 Discussion 达成共识 → 在 Issue 明确范围 → 提交 PR 实现合入</strong>
+协作黄金三部曲：<strong>在 Discussion 达成共识 → 在 Issue 明确范围 → 提交 PR 实现合入</strong>
 </div>
 
 ---
@@ -356,15 +356,15 @@ class: flex flex-col h-full
 
 <div class="space-y-3 text-xs text-gray-300">
   <div class="p-3 bg-white/5 border border-white/10 rounded-xl space-y-1">
-    <strong class="text-white">✅ 阅读 CONTRIBUTING.md</strong>：<br/>
+    <strong class="text-emerald-600">阅读 CONTRIBUTING.md</strong>：<br/>
     每个成熟开源项目都有自己特定的代码格式化脚本与分支命名指南。
   </div>
   <div class="p-3 bg-white/5 border border-white/10 rounded-xl space-y-1">
-    <strong class="text-white">✅ 双生态本地测试全绿</strong>：<br/>
+    <strong class="text-emerald-600">双生态本地测试全绿</strong>：<br/>
     前端运行 <code>pnpm test</code> / <code>npm run lint</code>；Python 运行 <code>pytest</code> / <code>ruff check</code>。
   </div>
   <div class="p-3 bg-white/5 border border-white/10 rounded-xl space-y-1">
-    <strong class="text-white">✅ 保持谦逊与沟通耐心</strong>：<br/>
+    <strong class="text-emerald-600">保持谦逊与沟通耐心</strong>：<br/>
     Maintainer 都是志愿维护者，遇到修改意见及时迭代，不气馁，共同让项目更棒！
   </div>
 </div>
@@ -372,4 +372,3 @@ class: flex flex-col h-full
 </div>
 
 </div>
-

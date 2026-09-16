@@ -107,12 +107,10 @@ class: flex flex-col h-full
   <span>良好 Commit 的工程准则</span>
 </h3>
 
-<div class="py-1">
 ```mermaid
 graph LR
     C1[Commit 1: 登录UI原型] --> C2[Commit 2: 接口联调] --> C3[Commit 3: 单元测试补全]
 ```
-</div>
 
 <div class="space-y-2 text-xs text-gray-300">
   <div class="p-2.5 bg-white/5 rounded-xl border border-white/10 leading-relaxed">
@@ -133,7 +131,7 @@ class: flex flex-col h-full
 ---
 
 <div class="pt-2 mb-2">
-  <h1 class="!border-none !mb-0 text-3xl font-bold">16｜查看 Git 当前状态：`git status`</h1>
+  <h1 class="!border-none !mb-0 text-3xl font-bold">16｜查看 Git 当前状态：'git status'</h1>
 </div>
 
 <div class="grid grid-cols-2 gap-8 my-auto">
@@ -154,8 +152,8 @@ class: flex flex-col h-full
       <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
       <strong>Changes not staged（红色）</strong>：已被跟踪修改，但尚未暂存。
     </div>
-    <div class="flex items-center gap-2 text-gray-400">
-      <div class="w-2.5 h-2.5 rounded-full bg-gray-400"></div>
+    <div class="flex items-center gap-2 text-rose-400">
+      <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
       <strong>Untracked files（红色）</strong>：新创建文件，Git 尚未跟踪。
     </div>
   </div>
@@ -199,7 +197,7 @@ class: flex flex-col h-full
 ---
 
 <div class="pt-2 mb-2">
-  <h1 class="!border-none !mb-0 text-3xl font-bold">17｜`git add`：把修改加入暂存区</h1>
+  <h1 class="!border-none !mb-0 text-3xl font-bold">17｜'git add'：把修改加入暂存区</h1>
 </div>
 
 <div class="grid grid-cols-2 gap-8 my-auto">
@@ -228,15 +226,13 @@ git add -p
 
 <div class="p-6 bg-gray-500/10 border border-gray-500/20 rounded-2xl flex flex-col justify-between space-y-4">
 
-<h3 class="text-base font-bold text-gray-200">区域转移心智模型</h3>
+<h3 class="text-base font-bold">区域转移心智模型</h3>
 
-<div class="py-2">
 ```mermaid
 graph LR
     W[工作区: 任意修改] -->|git add| S[暂存区: 准备好的一组快照]
     S -->|git restore --staged| W
 ```
-</div>
 
 <div class="p-3.5 bg-blue-500/10 border border-blue-500/20 text-xs rounded-xl space-y-1.5 text-gray-300">
   <div>• 避免习惯性无脑 <code>git add .</code>，防止将临时配置文件一并带入。</div>
@@ -253,7 +249,7 @@ class: flex flex-col h-full
 ---
 
 <div class="pt-2 mb-2">
-  <h1 class="!border-none !mb-0 text-3xl font-bold">18｜`git commit`：保存一次版本快照</h1>
+  <h1 class="!border-none !mb-0 text-3xl font-bold">18｜'git commit'：保存一次版本快照</h1>
 </div>
 
 <div class="grid grid-cols-2 gap-8 my-auto">
@@ -317,49 +313,49 @@ class: flex flex-col h-full
 
 <div class="p-4 bg-green-500/10 border border-green-500/25 rounded-xl space-y-1">
   <div class="font-bold text-green-400 text-sm">feat:</div>
-  <div class="text-gray-200">新增特性与功能</div>
+  <div>新增特性与功能</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">feat(auth): add google login</div>
 </div>
 
 <div class="p-4 bg-red-500/10 border border-red-500/25 rounded-xl space-y-1">
   <div class="font-bold text-red-400 text-sm">fix:</div>
-  <div class="text-gray-200">修复缺陷与 Bug</div>
+  <div>修复缺陷与 Bug</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">fix(order): resolve null crash</div>
 </div>
 
 <div class="p-4 bg-blue-500/10 border border-blue-500/25 rounded-xl space-y-1">
   <div class="font-bold text-blue-400 text-sm">docs:</div>
-  <div class="text-gray-200">仅修改文档或注释</div>
+  <div>仅修改文档或注释</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">docs: update readme setup</div>
 </div>
 
 <div class="p-4 bg-purple-500/10 border border-purple-500/25 rounded-xl space-y-1">
   <div class="font-bold text-purple-400 text-sm">refactor:</div>
-  <div class="text-gray-200">代码重构与结构优化</div>
+  <div>代码重构与结构优化</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">refactor: extract api client</div>
 </div>
 
 <div class="p-4 bg-yellow-500/10 border border-yellow-500/25 rounded-xl space-y-1">
   <div class="font-bold text-yellow-400 text-sm">test:</div>
-  <div class="text-gray-200">新增或修正自动化测试</div>
+  <div>新增或修正自动化测试</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">test: add auth e2e specs</div>
 </div>
 
 <div class="p-4 bg-pink-500/10 border border-pink-500/25 rounded-xl space-y-1">
   <div class="font-bold text-pink-400 text-sm">style:</div>
-  <div class="text-gray-200">空格格式/分号调整</div>
+  <div>空格格式/分号调整</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">style: format with prettier</div>
 </div>
 
 <div class="p-4 bg-indigo-500/10 border border-indigo-500/25 rounded-xl space-y-1">
   <div class="font-bold text-indigo-400 text-sm">perf:</div>
-  <div class="text-gray-200">性能优化提升</div>
+  <div>性能优化提升</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">perf: optimize query index</div>
 </div>
 
 <div class="p-4 bg-gray-500/10 border border-gray-500/25 rounded-xl space-y-1">
   <div class="font-bold text-gray-400 text-sm">chore:</div>
-  <div class="text-gray-200">构建工具依赖变更</div>
+  <div>构建工具依赖变更</div>
   <div class="text-gray-400 font-mono pt-1 text-xs">chore: bump vite to 5.0</div>
 </div>
 

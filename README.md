@@ -4,7 +4,7 @@ To start the slide show:
 
 - `[object Object] install`
 - `[object Object] run dev`
-- visit <http://localhost:3030>
+- visit <http://localhost:3000>
 
 Edit the [slides.md](./slides.md) to see the changes.
 

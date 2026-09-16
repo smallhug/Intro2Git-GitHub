@@ -16,15 +16,20 @@ duration: 60min
 
 <div class="absolute inset-0 bg-white -z-10"></div>
 
-<div class="flex flex-col items-center justify-center h-full pt-8 relative z-10">
+<!-- 左上角品牌长条 Logo（放大至 2 倍） -->
+<div class="abs-tl m-6 z-20">
+  <PhaseTerraLogo class="h-[72px] w-auto" />
+</div>
 
-<!-- 主标题 -->
-<h1 class="text-5xl font-extrabold tracking-tight text-gray-900 mb-4 !border-none !text-gray-900">
+<div class="flex flex-col items-center justify-center h-full -mt-8 relative z-10">
+
+<!-- 主标题：上移并加大字号 -->
+<h1 class="text-6xl font-black tracking-tight text-gray-900 mb-5 !border-none !text-gray-900">
   Git & GitHub 入门分享
 </h1>
 
-<!-- 副标题 -->
-<p class="text-2xl font-light text-gray-600 mb-9 max-w-2xl">
+<!-- 副标题：保持不变 -->
+<p class="text-3xl font-light mb-9 max-w-2xl text-gray-600">
   从获取开源项目到规范化代码管理
 </p>
 
@@ -131,7 +136,7 @@ class: flex flex-col h-full
     <span>工程规范与安全红线</span>
   </div>
   <p class="text-xs !text-gray-600 leading-relaxed">
-    特性分支工作流、前端与 Python 双 .gitignore 模版、密钥防泄露与全场景命令速查。
+    前端与 Python 双 .gitignore 模版、密钥防泄露红线、全场景命令速查与终篇闭环。
   </p>
 </div>
 

@@ -1,5 +1,5 @@
 $ErrorActionPreference = "SilentlyContinue"
-$port = 3030
+$port = 3000
 $url = "http://localhost:$port/"
 $listener = New-Object System.Net.HttpListener
 

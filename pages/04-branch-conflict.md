@@ -30,9 +30,8 @@ class: flex flex-col h-full
 
 <div class="p-6 bg-gray-500/10 border border-gray-500/20 rounded-2xl flex flex-col justify-between space-y-4">
 
-<h3 class="text-base font-bold text-gray-200">分支演进拓扑模型</h3>
+<h3 class="text-base font-bold">分支演进拓扑模型</h3>
 
-<div class="py-2">
 ```mermaid
 graph LR
     subgraph 生产环境 main
@@ -42,9 +41,8 @@ graph LR
       M1 --> F1[feat: 登录界面] --> F2[feat: 鉴权联调]
     end
 ```
-</div>
 
-<div class="p-3.5 bg-blue-500/10 border border-blue-500/20 text-xs rounded-xl text-blue-200 leading-relaxed">
+<div class="p-3.5 bg-blue-500/10 border border-blue-500/20 text-xs rounded-xl text-blue-300 leading-relaxed">
   <strong>廉价轻量的 Git 分支</strong>：在 Git 中，创建一个分支只是新建了一个 41 字节的指针文件，创建与切换都是<strong>瞬间完成（几毫秒）</strong>，与庞大的文件复制有天壤之别！
 </div>
 
@@ -80,14 +78,14 @@ git switch main
 ```
 
 <div class="p-3 bg-white/5 border border-white/10 rounded-xl text-xs text-gray-400">
-  💡 历史命令 <code>checkout</code> 职责混杂（既切分支又还原文件），Git 2.23+ 拆分出了专注于分支的 <code>switch</code>。
+历史命令 <code>checkout</code> 职责混杂（既切分支又还原文件），Git 2.23+ 拆分出了专注于分支的 <code>switch</code>。
 </div>
 
 </div>
 
 <div class="p-6 bg-gray-500/10 border border-gray-500/20 rounded-2xl flex flex-col justify-between space-y-3">
 
-<h3 class="text-base font-bold text-purple-400">🏷️ 团队分支规范化命名体系</h3>
+<h3 class="text-base font-bold text-purple-400">团队分支规范化命名体系</h3>
 
 <table class="w-full text-xs border-collapse">
   <thead>
@@ -116,7 +114,7 @@ git switch main
   </tbody>
 </table>
 
-<div class="text-xs text-gray-400 pt-1">
+<div class="text-xs pt-1">
   清晰的前缀让所有团队成员对当前任务属性与紧急度一目了然。
 </div>
 
@@ -136,26 +134,8 @@ class: flex flex-col h-full
 
 <div class="my-auto space-y-4">
 
-<div class="p-4 bg-black/20 border border-gray-800 rounded-2xl">
-```mermaid
-gitGraph
-    commit id: "v1.0-release"
-    branch feature-login
-    checkout feature-login
-    commit id: "feat: login UI"
-    commit id: "feat: login api"
-    checkout main
-    branch hotfix-crash
-    checkout hotfix-crash
-    commit id: "fix: null pointer"
-    checkout main
-    merge hotfix-crash id: "Merge hotfix" tag: "v1.0.1"
-    checkout feature-login
-    merge main id: "sync main"
-    commit id: "test: auth e2e"
-    checkout main
-    merge feature-login id: "Merge feature" tag: "v1.1.0"
-```
+<div class="p-3 bg-gray-50/80 border border-gray-200 rounded-2xl">
+  <GitTeamGraph />
 </div>
 
 <div class="grid grid-cols-3 gap-4 text-xs text-center">
@@ -181,7 +161,7 @@ class: flex flex-col h-full
 ---
 
 <div class="pt-2 mb-2">
-  <h1 class="!border-none !mb-0 text-3xl font-bold">23｜`git merge`：分支代码合并</h1>
+  <h1 class="!border-none !mb-0 text-3xl font-bold">23｜'git merge'：分支代码合并</h1>
 </div>
 
 <div class="grid grid-cols-2 gap-8 my-auto">
@@ -208,9 +188,8 @@ git branch -d feature/user-profile
 
 <div class="p-6 bg-gray-500/10 border border-gray-500/20 rounded-2xl flex flex-col justify-between space-y-4">
 
-<h3 class="text-base font-bold text-yellow-400">两种核心合并模式图解</h3>
+<h3 class="text-base font-bold">两种核心合并模式图解</h3>
 
-<div class="py-2">
 ```mermaid
 graph TD
     subgraph 快进合并 Fast-Forward
@@ -223,9 +202,8 @@ graph TD
       C1 --> M
     end
 ```
-</div>
 
-<div class="p-3.5 bg-yellow-500/10 border border-yellow-500/30 text-xs rounded-xl text-yellow-200 leading-relaxed">
+<div class="p-3.5 bg-yellow-500/10 border border-yellow-500/30 text-xs rounded-xl leading-relaxed">
   <strong>团队规约</strong>：合并进主干时，团队通常禁用快进合并（<code>git merge --no-ff</code>），显式保留特性分支的生命周期与拓扑节点。
 </div>
 
@@ -285,7 +263,7 @@ const TIMEOUT = 8000;
 </div>
 
 <div class="p-3 bg-emerald-500/15 border border-emerald-500/25 rounded-xl">
-  <strong class="text-emerald-300">第 3 步：完成合并提交</strong><br/>
+  <strong class="text-emerald-600">第 3 步：完成合并提交</strong><br/>
   <code>git commit -m "fix: resolve merge conflict in config"</code>
 </div>
 
