@@ -22,8 +22,10 @@ slides-export.pdf
 slides-export.pptx
 slides-export.png
 slides-export.md
+slides-export/
 *.pdf
 *.pptx
+
 
 # ==========================================
 # 日志文件 (Logs)
